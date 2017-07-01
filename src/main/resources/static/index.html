@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Test</title>
+	<script src="https://cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<div id="app">
+		<h1>Stock Price</h1>		
+		<div>
+		<ul>
+			<li v-for="m in list1">{{m.name}}: {{m.price}}</li>
+		</ul>
+		</div>
+		<div>
+		<ul>
+			<li v-for="m in list2">{{m.name}}: {{m.price}}</li>
+		</ul>
+		</div>
+	</div>
+</body>
+<script>
+
+let stompClient = null;
+
+var vm = new Vue({
+	el: '#app',
+	mounted: function () {		
+		this.$nextTick(function () {			
+			let socket = new SockJS('/test-info');
+		    stompClient = Stomp.over(socket);
+		    stompClient.connect({}, function (frame) {		    	
+		        console.log('Connected: ' + frame);
+		        
+		        stompClient.subscribe('/stock/price', function (val) {		        	
+		        	console.log(val);
+		        	console.log(JSON.parse(val.body));					
+					vm.list1 = JSON.parse(val.body);
+		        });
+		    });
+		    
+		    let socket2 = new SockJS('/test-info');
+		    stompClient2 = Stomp.over(socket2);
+		    stompClient2.connect({}, function (frame) {		    	
+		        console.log('Connected: ' + frame);		       		      
+		        
+		        stompClient2.subscribe('/stock/price-fast', function (val) {		        	
+		        	console.log(val);
+		        	console.log(JSON.parse(val.body));					
+					vm.list2 = JSON.parse(val.body);
+		        });
+		    });
+		});
+	},
+	data: function () {
+		return {
+	   		message: 'Dynamic Content',
+	   		list1: [],
+	   		list2: []
+		}
+	}
+})
+</script>
+</html>
