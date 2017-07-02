@@ -10,8 +10,8 @@ This project demonstrates on the use of Springboot, SockJs, Stomp and Vue.js
 
 1. Run the application as "Spring Boot App" in Eclipse.
 
-1. The application can also be started on command line
+1. The application can also be started on command line.
 
 	mvn spring-boot run
 
-1. Go to http://localhost:8080 and see the number updated periodically without manually refreshing the page.
+1. Go to http://localhost:8080 and see the numbers updated periodically without manually refreshing the page.
