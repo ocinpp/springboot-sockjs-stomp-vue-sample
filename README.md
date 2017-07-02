@@ -1,4 +1,5 @@
-#Readme
+# Readme
+
 This project demonstrates on the use of Springboot, SockJs, Stomp and Vue.js 
 
 ## Running the application
