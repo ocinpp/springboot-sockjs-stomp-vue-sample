@@ -29,7 +29,7 @@ public class InfoController {
     	StockQuote stock1 = new StockQuote("Fantastic Food", val1);
     	StockQuote stock2 = new StockQuote("Marvellous Car", val2);
     	
-    	List<StockQuote> list = new ArrayList<StockQuote>();
+    	List<StockQuote> list = new ArrayList<>();
     	list.add(stock1);
     	list.add(stock2);
     	
@@ -48,7 +48,7 @@ public class InfoController {
     	StockQuote stock1 = new StockQuote("Airplane 1", val1);
     	StockQuote stock2 = new StockQuote("Electricity", val2);
     	
-    	List<StockQuote> list = new ArrayList<StockQuote>();
+    	List<StockQuote> list = new ArrayList<>();
     	list.add(stock1);
     	list.add(stock2);    	
     	
