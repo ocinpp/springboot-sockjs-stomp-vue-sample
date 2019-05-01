@@ -1,5 +1,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/ocinpp/springboot-sockjs-stomp-vue-sample/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/ocinpp/springboot-sockjs-stomp-vue-sample?targetFile=pom.xml)
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Focinpp%2Fspringboot-sockjs-stomp-vue-sample.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Focinpp%2Fspringboot-sockjs-stomp-vue-sample?ref=badge_shield)
+
 # Readme
 
 This project demonstrates on the use of Springboot, SockJs, Stomp and Vue.js 
