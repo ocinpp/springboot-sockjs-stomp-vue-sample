@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/ocinpp/springboot-sockjs-stomp-vue-sample/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/ocinpp/springboot-sockjs-stomp-vue-sample?targetFile=pom.xml)
+
 # Readme
 
 This project demonstrates on the use of Springboot, SockJs, Stomp and Vue.js 
@@ -12,6 +14,8 @@ This project demonstrates on the use of Springboot, SockJs, Stomp and Vue.js
 
 1. The application can also be started on command line.
 
-	mvn spring-boot run
+```console
+mvn spring-boot run
+```
 
 1. Go to http://localhost:8080 and see the numbers updated periodically without manually refreshing the page.
